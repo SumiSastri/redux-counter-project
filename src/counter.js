@@ -18,10 +18,15 @@ function mapStateToProps(state) {
 		count: state.count
 	};
 }
+
+// set up actions - payload transfer from component to store Step 2 (action set up)
+
 function mapDispatchToProps(dispatch) {
 	return {
 		onIncrementClick: () => {
 			console.log('click');
+			const action = { type: 'INCREMENT' };
+			dispatch(action);
 		}
 	};
 }
