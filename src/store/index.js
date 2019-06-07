@@ -13,6 +13,8 @@ const reducer = (state = initialState, action) => {
 	console.log('reducer running', action);
 
 	// set up the conditions of the action to be dispatched - here add 1 to original state
+	// object assign to brand new object to copy it - like a spread operator
+
 	switch (action.type) {
 		case 'INCREMENT':
 			return Object.assign({}, state, { count: state.count + 1 });

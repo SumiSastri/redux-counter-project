@@ -13,21 +13,23 @@ function Counter(props) {
 	);
 }
 function mapStateToProps(state) {
-	console.log('map', state);
+	console.log('mapStateToProps', state);
 	return {
 		count: state.count
 	};
 }
 
-// set up actions - payload transfer from component to store Step 2 (action set up)
+// set up second action - payload transfer from component to store (dispatcher)
 
 function mapDispatchToProps(dispatch) {
 	return {
 		onIncrementClick: () => {
-			console.log('click');
+			console.log('incrementClickWorking');
 			const action = { type: 'INCREMENT' };
 			dispatch(action);
 		}
 	};
 }
+// connect dispatch actions to store
+
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);
