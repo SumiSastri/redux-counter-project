@@ -16,6 +16,7 @@ const reducer = (state = initialState, action) => {
 	// set up the conditions of the action to be dispatched - here add 1 to original state
 	// object assign to brand new object to copy it - like a spread operator
 	// set up first action (creator)
+	// set up decrement - second creator
 
 	switch (action.type) {
 		case 'INCREMENT':

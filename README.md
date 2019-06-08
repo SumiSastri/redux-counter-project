@@ -4,6 +4,12 @@ Initial dependencies set up
 npx create-react-app “name of project”
 npm install redux react-redux --save
 
+#### You Tube resources used
+
+Edureka
+Hitesh Chowdhary
+Eric Sowell
+
 ## What is redux?
 
 It is a form of data-flow control -  Dan Abramov and Andrew Clark 2015 influenced by ELM & React-flux
@@ -15,7 +21,7 @@ This unidirectional flow allows any component to pass data to any other componen
 
 Redux is useful to scale an app when there is a need to change state in multiple places.
 
-Data is normalized in one location so you can have copies of data (state) all in sync so that all data-copies are known to each other, this eliminates ‘lurking’ copies of state (data).
+Data is normalized in one location so you can have copies of data (state)all in sync so that all data-copies are known to each other, this eliminates ‘lurking’ copies of state (data).
 
 Redux in the app complexity curve
 Browser-based        / DOM manipulation / scale DOM manipulation  /   more complex data flow
@@ -27,7 +33,7 @@ Create the basic framework of a component in React
 Link to main app 
 
 1. Create a store (object) Store handle all state changes in one place for system security/ stability as well as handling complex data flows
-    * const store = createStore(reducer) 
+   
     * set initial state - the store holds the values in state which can be accessed by the getState() method
     * It is read only and changes come via reducer function
     * Reducer (state, action) changes intial state via pure functions and payload from action
@@ -37,8 +43,6 @@ Link to main app
 ```
 import { createStore } from 'redux';
 
-const store = createStore(reducer);
-
 const initialState = {
 	count: 0
 };
@@ -47,6 +51,8 @@ const reducer = (state = initialState, action) => {
 	console.log('reducer running', action);
 	return state;
 };
+
+const store = createStore(reducer);
 
 export default store;
 ```  
